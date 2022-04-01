@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.App a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.App a:hover {
+  color: red;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
