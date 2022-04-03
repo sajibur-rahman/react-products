@@ -4,6 +4,8 @@ import MySelf from '../MySelf/MySelf';
 import Sister from '../Sister/Sister';
 
 const Father = ({house,money}) => {
+
+    console.log('components rendard')
     return (
         <div>
             <h3>father</h3>

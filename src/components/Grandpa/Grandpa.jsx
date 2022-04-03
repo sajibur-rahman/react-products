@@ -1,16 +1,17 @@
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
+import MoneyContext from "../../contxts/MoneyContext";
 import Aunty from "../Aunty/Aunty";
 import Father from "../Father/Father";
 import Uncle from "../Uncle/Uncle";
 import "./Grandpa.css";
 
-export const MoneyContext = createContext(10000);
+// export const MoneyContext = createContext(10000);
 
 const Grandpa = () => {
   const [house, setHouse] = useState(1);
   const money = 10000;
   return (
-    <MoneyContext.Provider value={[house, setHouse]}>
+    <MoneyContext.Provider value={{money,house}}>
       <div className="grandpa">
         <h2>grandpa</h2>
         <p>{money}</p>
@@ -21,9 +22,9 @@ const Grandpa = () => {
           </button>
         </p>
         <span style={{ display: "flex" }}>
-          <Father house={house} />
-          <Uncle house={house} />
-          <Aunty house={house} />
+          <Father />
+          <Uncle  />
+          <Aunty  />
         </span>
       </div>
     </MoneyContext.Provider>

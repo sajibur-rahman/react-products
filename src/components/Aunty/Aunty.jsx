@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from "react";
+import MoneyContext from "../../contxts/MoneyContext";
 
-const Aunty = ({house}) => {
-    return (
-        <div>
-            <h2>aunty</h2>
-            <p>hosue {house}</p>
-        </div>
-    );
+const Aunty = () => {
+  const { house } = useContext(MoneyContext);
+  return (
+    <div>
+      <h2>aunty</h2>
+      <p>hosue {house}</p>
+    </div>
+  );
 };
 
 export default Aunty;

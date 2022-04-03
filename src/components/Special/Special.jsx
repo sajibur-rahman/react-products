@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
-import { MoneyContext } from '../Grandpa/Grandpa';
+import React, { useContext } from "react";
+import MoneyContext from "../../contxts/MoneyContext";
 
-const Special = () => {
-    const [house, setHouse]= useContext(MoneyContext);
+
+
+
+function Special(){
+    const {money} = useContext(MoneyContext);
+    console.log('special')
     return (
         <div>
-            <h1>special {house}</h1>
-            <button onClick={() => setHouse((prevState) => prevState + 1)}>Buy now</button>
+            <h1>special {money}</h1>
         </div>
-    );
-};
-
+    )
+}
 export default Special;
